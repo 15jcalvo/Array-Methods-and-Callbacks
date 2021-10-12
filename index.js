@@ -4,17 +4,30 @@ const { fifaData } = require('./fifa.js')
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Practice accessing data by console.log-ing the following pieces of data note, you may want to filter the data first 😉*/
+const twentyFourteen = fifaData.filter(function(item){
+    return item.Year == 2014;
+});
+console.log(twentyFourteen);
+const twentyFourteenFinal = twentyFourteen.filter(function(item){
+    return item.Stage == "Final";
+});
+console.log(twentyFourteenFinal);
 
 //(a) Home Team name for 2014 world cup final
-
+console.log(twentyFourteenFinal[0]['Home Team Name']);
 //(b) Away Team name for 2014 world cup final
-
+console.log(twentyFourteenFinal[0]['Away Team Name']);
 //(c) Home Team goals for 2014 world cup final
-
+console.log(twentyFourteenFinal[0]['Home Team Goals']);
 //(d) Away Team goals for 2014 world cup final
-
+console.log(twentyFourteenFinal[0]['Away Team Goals']);
 //(e) Winner of 2014 world cup final */
-
+if(twentyFourteenFinal[0]['Home Team Goals'] > twentyFourteenFinal[0]['Away Team Goals']){
+    console.log(twentyFourteenFinal[0]['Home Team Name'])
+}
+else if(twentyFourteenFinal[0]['Home Team Goals'] < twentyFourteenFinal[0]['Away Team Goals']){
+    console.log(twentyFourteenFinal[0]['Away Team Name'])
+}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
